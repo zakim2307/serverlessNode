@@ -15,23 +15,6 @@ const serverlessConfiguration: AWS = {
   provider: {
     name: 'aws',
     runtime: 'nodejs14.x',
-    // iam: {
-    //   role: {
-    //     statements: [{
-    //       Effect: 'Allow',
-    //       Action: [
-    //         "dynamodb:DescribeTable",
-    //         "dynamodb:Query",
-    //         "dynamodb:Scan",
-    //         "dynamodb:GetItem",
-    //         "dynamodb:PutItem",
-    //         "dynamodb:UpdateItem",
-    //         "dynamodb:DeleteItem"
-    //       ],
-    //       Resource: "arn:aws:dynamodb:us-east-1:*:*"
-    //     }]
-    //   }
-    // },
     apiGateway: {
       minimumCompressionSize: 1024,
       shouldStartNameWithService: true,

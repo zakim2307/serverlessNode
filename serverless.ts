@@ -11,10 +11,16 @@ const serverlessConfiguration: AWS = {
       includeModules: true,
     },
   },
-  plugins: ['serverless-webpack'],
+  plugins: [
+    'serverless-webpack', 
+    'serverless-offline', 
+    'serverless-reqvalidator-plugin', 
+    'serverless-aws-documentation'
+  ],
   provider: {
     name: 'aws',
     runtime: 'nodejs14.x',
+    stage: "dev",
     apiGateway: {
       minimumCompressionSize: 1024,
       shouldStartNameWithService: true,
@@ -24,8 +30,15 @@ const serverlessConfiguration: AWS = {
     },
     lambdaHashingVersion: '20201221',
   },
+
+
   // import the function via paths
   functions: { hello, greet },
+  resources: {
+    Resources: {
+      
+    }
+  }
 };
 
 module.exports = serverlessConfiguration;
