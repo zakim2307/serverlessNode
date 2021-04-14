@@ -6,15 +6,14 @@ export default {
   events: [
     {
       http: {
-        method: 'get',
-        path: 'greet',
-        cors: true,
+        method: 'post',
+        path: 'hello',
         request: {
           schema: {
             'application/json': schema
           }
-        },
-      },
+        }
+      }
     }
   ]
 }
