@@ -11,7 +11,7 @@ class pgController {
             const todos = rows;
 
             client.release();
-
+            console.log(todos);
             res.send(todos);
         } catch (error) {
             res.status(400).send(error);
